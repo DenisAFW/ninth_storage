@@ -17,13 +17,13 @@ def main(func: Callable):
     return wrappers
 
 
+@main
 def rand_num():
-    f = randrange(0,501)
+    f = randrange(0, 501)
     if f == 10:
         return True
     else:
         return False
 
 
-control = main(rand_num)
-print(f'Функция {rand_num.__name__} отработала {control()} раз(а)')
+print(f'Функция {rand_num.__name__} отработала {rand_num()} раз(а)')
